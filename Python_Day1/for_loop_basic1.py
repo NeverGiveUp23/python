@@ -14,3 +14,10 @@
 # for i in range(2018,0,-4):
 #   print(i)
 
+def add(a, b):
+    x = a + b
+    return x
+sum1 = add(4,6)
+sum2 = add(1,4)
+sum3 = sum1 + sum2
+
