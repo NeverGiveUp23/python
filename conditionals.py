@@ -21,3 +21,34 @@ if x < 10:
 
 for i in range(2, 21, 2):
   print(i)
+  
+the_list = ['felix', 'vargas', 'jr']
+# for x in the_list:
+#   print(x)
+  
+for i in range(0, len(the_list)):
+    print(i, the_list[i])
+    
+count = 0
+while count <= 5:
+    print("looping - ", count) #this will grab your string and add count each time the string is called to loop through
+    count += 1
+
+y = 3
+while y > 0:
+    print(y)
+    y = y - 1
+    # break
+else:
+    print("Final else statement")
+
+y = 3
+while y > 0:
+    print(y)
+    y = y - 1
+    if y == 0:
+        break
+else:		# only executes on a clean exit from the while loop (i.e. not a break)
+  print("Final else statement")
+# output: 3, 2, 1
+
