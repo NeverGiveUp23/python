@@ -1,38 +1,38 @@
 # class User:
-#   def __init__(self):
-#     self.first_name = "Felix"
-#     self.last_name = 'Vargas'
-#     self.age = 29
+  def __init__(self):
+    self.first_name = "Felix"
+    self.last_name = 'Vargas'
+    self.age = 29
 
-# print("Hello")
-# user_felix = User()
-# print(user_felix.first_name)
+print("Hello")
+user_felix = User()
+print(user_felix.first_name)
 
-# user_2 = User()
-# print(user_2.first_name)
+user_2 = User()
+print(user_2.first_name)
 
 # adjusting user classes
 
-# class Shoe:
-#   def __init__(self, brand, shoe_type, price):
-#     self.brand = brand
-#     self.type = shoe_type
-#     self.price = price
-#     self.in_stock = True
-# skater_shoe = Shoe("Nike", "Air-Force", 79.99)
-# print(skater_shoe.brand)
+class Shoe:
+  def __init__(self, brand, shoe_type, price):
+    self.brand = brand
+    self.type = shoe_type
+    self.price = price
+    self.in_stock = True
+skater_shoe = Shoe("Nike", "Air-Force", 79.99)
+print(skater_shoe.brand)
 
 #above will make a class with the description of the items in the init method, and than assigning it to each other and after creating a shoe.
 
-# class User:
-#   def __init__(self, name, email):
-#     self.name = name
-#     self.email = email
-#   def greeting(self):
-#     print(f"Hello, my name is {self.name}")
+class User:
+  def __init__(self, name, email):
+    self.name = name
+    self.email = email
+  def greeting(self):
+    print(f"Hello, my name is {self.name}")
     
-# felix = User("Felix", "felixvjr0@gmail.com")
-# felix.greeting()
+felix = User("Felix", "felixvjr0@gmail.com")
+felix.greeting()
 
 # this will get us to print out the user's name, assign the parameters the its on self.name and create a function that will put it all together for the user.
 #create a new variable to assign it the User class with the parameters describing the user.
