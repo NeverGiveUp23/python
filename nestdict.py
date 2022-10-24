@@ -19,17 +19,15 @@
 # print(sports_directory["soccer"])
 
 
-student = [
+students = [
         {'first_name':  'Michael', 'last_name' : 'Jordan'},
         {'first_name' : 'John', 'last_name' : 'Rosales'},
         {'first_name' : 'Mark', 'last_name' : 'Guillen'},
         {'first_name' : 'KB', 'last_name' : 'Tonel'}
     ]
 
-def iterateDict(key_name, some_list):
-  if key_name == 'first_name':
-    print(student[0]['first_name'])
-  elif key_name == 'last_name':
-    print(key_name)
-iterateDict(student[0],student)
+def iterateDict(students):
+  for student in students:
+    print("first_name - " + student['first_name'] + ", last_name" " - " + student['last_name'])
+iterateDict(students)
 
