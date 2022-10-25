@@ -62,48 +62,50 @@
 
 
 
-# class BankAccount:
-#     # don't forget to add some default values for these parameters!
-#     def __init__(self, int_rate, balance): 
-#       self.int_rate = int_rate
-#       self.balance = balance
-#         # don't worry about user info here; we'll involve the User class soon
-#     def deposit(self, amount):
-#       self.new_balance = self.balance + amount
-#       print(f"your balance is now {self.new_balance}")
-#       return self
-#     # above i setting the deposit in for the user, it is adding what the user already has in the bank + what they're about to deposit and printing it to the console
-#     def withdraw(self, amount):
-#       self.new_balance2 = self.balance - amount
-#       if self.balance == 0:
-#         self.balance2 = self.balance - 5
-#         print(f"Your Balance is now {self.balance2}")
-#       else:
-#         print(f"Your balance is now {self.new_balance2}")
-#     # above is just creating a new balance in balance2 and setting it to the balance and - the amount that is being put in. also setting an if statement for if the user has a low balance
-#     def display_account_info(self):
-#       print(f"Balance: {self.balance}")
-#       return self
-#     def yield_interest(self):
-#       self.balance = self.balance * self.int_rate
-#       print(f"you gained {self.balance}")
+class BankAccount:
+    # don't forget to add some default values for these parameters!
+    def __init__(self, int_rate, balance): 
+      self.int_rate = int_rate
+      self.balance = balance
+        # don't worry about user info here; we'll involve the User class soon
+    def deposit(self, amount):
+      self.new_balance = self.balance + amount
+      print(f"your balance is now {self.new_balance}")
+      return self
+    # above i setting the deposit in for the user, it is adding what the user already has in the bank + what they're about to deposit and printing it to the console
+    def withdraw(self, amount):
+      self.new_balance2 = self.balance - amount
+      if self.balance == 0:
+        self.balance2 = self.balance - 5
+        print(f"Your Balance is now {self.balance2}")
+      else:
+        print(f"Your balance is now {self.new_balance2}")
+    # above is just creating a new balance in balance2 and setting it to the balance and - the amount that is being put in. also setting an if statement for if the user has a low balance
+    def display_account_info(self):
+      print(f"Balance: {self.balance}")
+      return self
+    def yield_interest(self):
+      self.balance = self.balance * self.int_rate
+      print(f"you gained {self.balance}")
     
     
-# bank_info = BankAccount(0.01, 2000)
-# bank_info.deposit(200).deposit(300).withdraw(100)
+bank_info = BankAccount(0.01, 2000)
+bank_info.deposit(200).deposit(300).withdraw(100)
 
 class User:
   def __init__(self, first_name, last_name):
     self.first_name = first_name
     self.last_name = last_name
-    self.account = BankAccount(int_rate=0.03, balance=600)
+    self.account = BankAccount(int_rate=0.03, balance = 100)
     
   def make_deposit(self, amount):
     self.account.deposit(amount)
+    return self
     
     
   def display(self):
     print(f"Felix, Checking Balance: {self.account.balance}")
+    return self
     
 
 
@@ -112,4 +114,4 @@ class User:
 
 
 display_user_balance = User('Felix', 'Vargas')
-display_user_balance.make_deposit(100)
+display_user_balance.make_deposit(300).display()
